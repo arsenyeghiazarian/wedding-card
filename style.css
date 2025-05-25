@@ -41,8 +41,8 @@ table {
 }
 
 @font-face {
-    font-family: 'Brittany';
-    src: url('./assets/fonts/BrittanySignature.ttf') format('truetype');
+    font-family: 'Vrdznagir';
+    src: url('./assets/fonts/Vrdznagir.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -65,10 +65,6 @@ body {
 
 .text-center {
     text-align: center;
-}
-
-.ff-brittany {
-    font-family: 'Brittany', sans-serif;
 }
 
 .section-1 {
@@ -112,10 +108,10 @@ body {
     }
 
     h1 {
-        font-size: 4rem;
+        font-size: 55px;
         padding-block: 2rem;
         text-transform: capitalize;
-        font-family: 'Brittany', sans-serif;
+        font-family: 'Vrdznagir', sans-serif
     }
 
     .p-1 {
@@ -198,12 +194,33 @@ body {
         justify-content: space-between;
         padding: 20px;
 
+        .info-1 {
+            position: relative;
+        }
 
         .info-2 {
             text-transform: initial;
             letter-spacing: 3px;
             text-align: left;
             line-height: 1.5;
+        }
+
+        .location::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            background-image: url('./assets/images/7.svg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 105px;
+            height: 90px;
+
+            @media screen and (max-width: 768px) {
+                width: 50px;
+                height: 43px;
+                bottom: -20px;
+            }
         }
     }
 
@@ -215,11 +232,46 @@ body {
         padding: 20px;
 
         .info-1 {
-            margin-top: -30px;
+            margin-top: -200px;
+            position: relative;
+        }
+
+        .time {
+            &::after {
+                content: '';
+                position: absolute;
+                right: -20px;
+                background-image: url('./assets/images/3.svg');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 105px;
+                height: 55px;
+            }
+
+            @media screen and (max-width: 768px) {
+                margin-left: -50px;
+                &::after {
+                    width: 50px;
+                    height: 25px;
+                    top: 60px;
+                }
+            }
         }
     }
 
     .time {
         margin: 50px 0;
+
+        @media screen and (max-width: 768px) {
+            margin: 30px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .location {
+        word-spacing: 100px;
+        line-height: 20px;
     }
 }

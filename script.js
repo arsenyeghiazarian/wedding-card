@@ -45,28 +45,3 @@
       update();
       const timer = setInterval(update, 1000);
     })();
-
-    const sections = document.querySelectorAll('section');
-    let current = 0;
-    let isThrottled = false;
-
-    function scrollToSection(idx) {
-      if (idx < 0 || idx >= sections.length) return;
-      sections[idx].scrollIntoView({ behavior: 'smooth' });
-      current = idx;
-    }
-
-    window.addEventListener('wheel', e => {
-      if (isThrottled) return;
-      isThrottled = true;
-      setTimeout(() => isThrottled = false, 800);  // throttle interval
-
-      if (e.deltaY > 0) {
-        scrollToSection(current + 1);
-      } else if (e.deltaY < 0) {
-        scrollToSection(current - 1);
-      }
-    }, { passive: true });
-
-    // ensure first section is in view on load
-    scrollToSection(0);
