@@ -134,13 +134,13 @@ body {
     @media screen and (max-width: 768px) {
         &::before {
             left: -30px;
-            width: 170px;
-            height: 170px;
+            width: 150px;
+            height: 150px;
         }
         &::after {
             bottom: -40px;
-            width: 200px;
-            height: 300px;
+            width: 170px;
+            height: 270px;
         }
     }
 }
