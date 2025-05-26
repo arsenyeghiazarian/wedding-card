@@ -196,6 +196,7 @@ body {
 
         .info-1 {
             position: relative;
+            line-height: 1.5;
         }
 
         .info-2 {
@@ -234,6 +235,7 @@ body {
         .info-1 {
             margin-top: -200px;
             position: relative;
+            line-height: 1.5;
         }
 
         .time {
@@ -250,11 +252,10 @@ body {
             }
 
             @media screen and (max-width: 768px) {
-                margin-left: -50px;
                 &::after {
                     width: 50px;
                     height: 25px;
-                    top: 60px;
+                    top: 100px;
                 }
             }
         }
